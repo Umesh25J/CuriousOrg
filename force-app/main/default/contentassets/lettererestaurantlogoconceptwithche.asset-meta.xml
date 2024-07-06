@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+    <language>en_US</language>
+    <masterLabel>lettererestaurantlogoconceptwithche</masterLabel>
+    <relationships>
+        <organization>
+            <access>VIEWER</access>
+        </organization>
+    </relationships>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>letter-e-restaurant-logo-concept-with-chef-hat-vector-template-restaurant-chef-hat-logo-symbol-2JNA1KK.jpeg</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

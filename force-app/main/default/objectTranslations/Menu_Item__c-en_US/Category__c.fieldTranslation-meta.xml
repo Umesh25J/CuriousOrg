@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Category --></label>
+    <name>Category__c</name>
+    <picklistValues>
+        <masterLabel>Appetizers</masterLabel>
+        <translation><!-- Appetizers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Desserts</masterLabel>
+        <translation><!-- Desserts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Drinks</masterLabel>
+        <translation><!-- Drinks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entrees</masterLabel>
+        <translation><!-- Entrees --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

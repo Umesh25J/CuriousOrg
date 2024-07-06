@@ -1,0 +1,12 @@
+Dear {!Contact.FirstName},
+
+{!Case.Solution_Description}
+{!Case.Id}
+Thank you,
+
+{!User.Name}
+{!Organization.Name}
+
+Your comment:
+
+{!Case.Description}

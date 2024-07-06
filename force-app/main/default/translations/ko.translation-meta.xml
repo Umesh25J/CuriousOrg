@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- My Trailblazer Journey --></label>
+        <name>My_Trailblazer_Journey</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Restaurant E-management System --></label>
+        <name>Restaurant_Emanagement_System</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- Duplicate Record Error --></label>
+        <name>Duplicate_Record_Error</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UserDeactivationAuditEmail --></label>
+        <name>UserDeactivationAuditEmail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User Deactivation Batch Size --></label>
+        <name>UserDeactivationBatchSize</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- User Deactivation Inactive Threshold --></label>
+        <name>UserDeactivationInactiveThreshold</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UserDeactivationQueryLimit --></label>
+        <name>UserDeactivationQueryLimit</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_BaseURL --></label>
+        <name>trlhdtips__tt_BaseURL</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_EnterPackageId --></label>
+        <name>trlhdtips__tt_EnterPackageId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_InvalidPackageId --></label>
+        <name>trlhdtips__tt_InvalidPackageId</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_ResetPasswordFail --></label>
+        <name>trlhdtips__tt_ResetPasswordFail</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_ResetPasswordSuccess --></label>
+        <name>trlhdtips__tt_ResetPasswordSuccess</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_ResetPasswordTitle --></label>
+        <name>trlhdtips__tt_ResetPasswordTitle</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- tt_ResetPasswordWarning --></label>
+        <name>trlhdtips__tt_ResetPasswordWarning</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- MyData --></label>
+        <name>MyData</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Top Accounts and Opportunities --></label>
+        <name>Top_Accounts_and_Opportunities</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- UI API Playground --></label>
+        <name>UI_API_Playground</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Account</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Account_Contact_Delete_On_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Account_Sales_Rep_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>After_Save_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <customErrorMessages>
+                <developerName>Update_Status_Block</developerName>
+                <field>Status</field>
+            </customErrorMessages>
+            <customErrorMessages>
+                <developerName>Custom_Error_Message_2</developerName>
+            </customErrorMessages>
+        </flows>
+        <fullName>Case_Creation_From_Web_to_case</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Cases_Owner_Change</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Change_Name_To_Salesforce_Geek</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Contact_to_Contact_Relationship_Delete_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Count_Open_Opps</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Create_Contact_Relationship_On_Contact_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Duplicate_Name_Account_Avoid</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>CannotSameNameAccount</name>
+                </fields>
+                <name>Error_For_Duplicate_Account</name>
+            </screens>
+        </flows>
+        <fullName>Error_Flow_for_Duplicate_Account</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <name>First</name>
+            </choices>
+            <choices>
+                <name>Second</name>
+            </choices>
+            <screens>
+                <fields>
+                    <name>FifthScreen_Section1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FifthScreen_Section1_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FifthScreen_Section1_Column2</name>
+                </fields>
+                <fields>
+                    <name>Insurance_Plan</name>
+                </fields>
+                <fields>
+                    <name>Location</name>
+                </fields>
+                <fields>
+                    <name>displaytest1</name>
+                </fields>
+                <fields>
+                    <name>hed0</name>
+                </fields>
+                <fields>
+                    <name>hed1</name>
+                </fields>
+                <fields>
+                    <name>info2</name>
+                </fields>
+                <fields>
+                    <name>inp1</name>
+                </fields>
+                <name>FifthScreen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>FirstScreen_Section1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FirstScreen_Section1_Column1</name>
+                </fields>
+                <fields>
+                    <name>FirstScreen_Section2</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FirstScreen_Section2_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FirstScreen_Section2_Column2</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FirstScreen_Section2_Column3</name>
+                </fields>
+                <fields>
+                    <name>heading2</name>
+                </fields>
+                <fields>
+                    <name>l15</name>
+                </fields>
+                <fields>
+                    <name>li1</name>
+                </fields>
+                <fields>
+                    <name>li2</name>
+                </fields>
+                <fields>
+                    <name>li3</name>
+                </fields>
+                <fields>
+                    <name>li4</name>
+                </fields>
+                <name>FirstScreen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>Doyou</name>
+                </fields>
+                <fields>
+                    <name>FourthScreen_Section1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FourthScreen_Section1_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FourthScreen_Section1_Column2</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FourthScreen_Section1_Column3</name>
+                </fields>
+                <fields>
+                    <name>FourthScreen_Section2</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FourthScreen_Section2_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FourthScreen_Section2_Column2</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FourthScreen_Section2_Column3</name>
+                </fields>
+                <fields>
+                    <name>Heading</name>
+                </fields>
+                <fields>
+                    <name>empty3</name>
+                </fields>
+                <fields>
+                    <name>empty4</name>
+                </fields>
+                <fields>
+                    <name>empty5</name>
+                </fields>
+                <fields>
+                    <name>second1</name>
+                </fields>
+                <name>FourthScreen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>EnterFullName</name>
+                </fields>
+                <fields>
+                    <name>Heading1</name>
+                </fields>
+                <fields>
+                    <name>SecondScreen_Section1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>SecondScreen_Section1_Column1</name>
+                </fields>
+                <fields>
+                    <name>SecondScreen_Section2</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>SecondScreen_Section2_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>SecondScreen_Section2_Column2</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>SecondScreen_Section2_Column3</name>
+                </fields>
+                <fields>
+                    <name>SecondScreen_Section3</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>SecondScreen_Section3_Column1</name>
+                </fields>
+                <fields>
+                    <name>SimpleText1</name>
+                </fields>
+                <fields>
+                    <name>SimpleText2</name>
+                </fields>
+                <fields>
+                    <name>empty12</name>
+                </fields>
+                <fields>
+                    <name>empty9</name>
+                </fields>
+                <fields>
+                    <name>start</name>
+                </fields>
+                <fields>
+                    <name>step</name>
+                </fields>
+                <name>SecondScreen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>Empty1</name>
+                </fields>
+                <fields>
+                    <name>Loved_One</name>
+                </fields>
+                <fields>
+                    <name>Myself</name>
+                </fields>
+                <fields>
+                    <name>ThirdScreen_Section1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>ThirdScreen_Section1_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>ThirdScreen_Section1_Column2</name>
+                </fields>
+                <fields>
+                    <name>heading5</name>
+                </fields>
+                <fields>
+                    <name>info</name>
+                </fields>
+                <fields>
+                    <name>simpleTest3</name>
+                </fields>
+                <fields>
+                    <name>simpleTest4</name>
+                </fields>
+                <name>ThirdScreen</name>
+            </screens>
+        </flows>
+        <fullName>FigmaScreen</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Lead_Insert_Prevent_As_Same_Contacts_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Opportunity_Above_50_Add_to_Acc_Team_Member</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Out_of_Business</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Scheduled_Case_Update</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <name>S_149a89f6_e93f_4402_b3c5_24148bee75c0</name>
+            </choices>
+            <choices>
+                <name>S_3792e0ac_4617_447c_b1de_9c5075f6b9d1</name>
+            </choices>
+            <choices>
+                <name>S_895a92c9_a675_4047_bd25_4b67d875a37b</name>
+            </choices>
+            <choices>
+                <name>S_a0e9d086_3411_4d8f_950d_f2758a33fc68</name>
+            </choices>
+            <choices>
+                <name>S_f6dcd3bd_2efc_4cdd_a3d5_4fb54e458aac</name>
+            </choices>
+            <screens>
+                <fields>
+                    <name>S_55cf98c1_dc1a_4104_b385_89dab3632c94</name>
+                </fields>
+                <fields>
+                    <name>S_62185e3d_591b_4ade_9910_383fb5ff11cf</name>
+                </fields>
+                <name>surveyQuestionPage</name>
+            </screens>
+            <textTemplates>
+                <name>thankYouDescriptionTextTemplate</name>
+            </textTemplates>
+            <textTemplates>
+                <name>thankYouLabelTextTemplate</name>
+            </textTemplates>
+        </flows>
+        <fullName>customer_satisfaction</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <name>S_50a1d272_b234_4f92_a8fe_fa15dc797af4</name>
+                </fields>
+                <fields>
+                    <name>S_8b93e61a_35a5_435c_9c3d_30831d2252d6</name>
+                </fields>
+                <name>surveyQuestionPage</name>
+            </screens>
+            <textTemplates>
+                <name>thankYouDescriptionTextTemplate</name>
+            </textTemplates>
+            <textTemplates>
+                <name>thankYouLabelTextTemplate</name>
+            </textTemplates>
+        </flows>
+        <fullName>net_promoter_score</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Guest Community Case --></label>
+        <name>GuestCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Community Case --></label>
+        <name>NewCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Partner Fund Requests and Partner Fund Claims --></description>
+        <label><!-- Partner Fund Requests and Partner Fund Claims --></label>
+        <name>MDF_Claim_Request_Crt</name>
+        <sections>
+            <label><!-- Partner Fund Claims --></label>
+            <name>Partner Fund Claims</name>
+        </sections>
+        <sections>
+            <label><!-- Partner Fund Requests --></label>
+            <name>Partner Fund Requests</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Omni-Channel Reports --></description>
+        <label><!-- Omni-Channel Reports --></label>
+        <name>Omni_Channel_Reports</name>
+        <sections>
+            <label><!-- Agent Work --></label>
+            <name>Agent Work</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Student Administrator View --></description>
+        <label><!-- Student Administrator View --></label>
+        <name>Student_Administrator_View</name>
+        <sections>
+            <label><!-- Students --></label>
+            <name>Students</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orchestration Run Logs Spring &apos;24 --></description>
+        <label><!-- Orchestration Run Logs Spring &apos;24 --></label>
+        <name>flow_orchestration_log_ootb_crt_two_four_eight</name>
+        <sections>
+            <label><!-- Orchestration Run Log --></label>
+            <name>Orchestration Run Log</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orchestration Runs Spring &apos;24 --></description>
+        <label><!-- Orchestration Runs Spring &apos;24 --></label>
+        <name>flow_orchestration_run_ootb_crt_two_four_eight</name>
+        <sections>
+            <label><!-- Orchestration Runs --></label>
+            <name>Orchestration Runs</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orchestration Stage Runs Spring &apos;24 --></description>
+        <label><!-- Orchestration Stage Runs Spring &apos;24 --></label>
+        <name>flow_orchestration_stage_run_ootb_crt_two_four_eight</name>
+        <sections>
+            <label><!-- Orchestration Stage Runs --></label>
+            <name>Orchestration Stage Runs</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orchestration Step Runs Spring &apos;24 --></description>
+        <label><!-- Orchestration Step Runs Spring &apos;24 --></label>
+        <name>flow_orchestration_step_run_ootb_crt_two_four_eight</name>
+        <sections>
+            <label><!-- Orchestration Step Runs --></label>
+            <name>Orchestration Step Runs</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orchestration Work Items Spring &apos;24 --></description>
+        <label><!-- Orchestration Work Items Spring &apos;24 --></label>
+        <name>flow_orchestration_work_item_ootb_crt_two_four_eight</name>
+        <sections>
+            <columns>
+                <label><!-- Orchestration Step Run: Label --></label>
+                <name>Orchestration Step Run: Label</name>
+            </columns>
+            <columns>
+                <label><!-- Orchestration Step Run: Name --></label>
+                <name>Orchestration Step Run: Name</name>
+            </columns>
+            <columns>
+                <label><!-- Orchestration Step Run: Status --></label>
+                <name>Orchestration Step Run: Status</name>
+            </columns>
+            <label><!-- Orchestration Step Runs --></label>
+            <name>Orchestration Step Runs</name>
+        </sections>
+        <sections>
+            <columns>
+                <label><!-- Assigned Group or Queue --></label>
+                <name>Assigned Group or Queue</name>
+            </columns>
+            <columns>
+                <label><!-- Assigned User --></label>
+                <name>Assigned User</name>
+            </columns>
+            <label><!-- Orchestration Work Items --></label>
+            <name>Orchestration Work Items</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Partner Fund Requests --></description>
+        <label><!-- Partner Fund Requests --></label>
+        <name>prm_partner_fund_request_crt</name>
+        <sections>
+            <label><!-- Partner Fund Requests --></label>
+            <name>Partner Fund Requests</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Partner Marketing Budgets --></description>
+        <label><!-- Partner Marketing Budgets --></label>
+        <name>prm_partner_marketing_budget_crt</name>
+        <sections>
+            <label><!-- Partner Marketing Budgets --></label>
+            <name>Partner Marketing Budgets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Login History for Experience Cloud Site Users --></description>
+        <label><!-- Login History for Experience Cloud Site Users --></label>
+        <name>prm_total_portal_login_crt</name>
+        <sections>
+            <label><!-- Login History --></label>
+            <name>Login History</name>
+        </sections>
+        <sections>
+            <label><!-- Network Members --></label>
+            <name>Network Members</name>
+        </sections>
+        <sections>
+            <label><!-- Networks --></label>
+            <name>Networks</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- User Details --></description>
+        <label><!-- User Details --></label>
+        <name>prm_unique_portal_crt</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Screen Flows --></description>
+        <label><!-- Screen Flows --></label>
+        <name>screen_flows_prebuilt_crt</name>
+        <sections>
+            <label><!-- Flow Interview Log Entries --></label>
+            <name>Flow Interview Log Entries</name>
+        </sections>
+        <sections>
+            <label><!-- Flow Interview Logs --></label>
+            <name>Flow Interview Logs</name>
+        </sections>
+    </reportTypes>
+</Translations>

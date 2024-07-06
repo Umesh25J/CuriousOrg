@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Duplicate_Record_Error</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Duplicate Record Error</shortDescription>
+        <value>Cannot add duplicate records</value>
+    </labels>
+    <labels>
+        <fullName>UserDeactivationAuditEmail</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UserDeactivationAuditEmail</shortDescription>
+        <value>umesh.bodacious@gmail.com</value>
+    </labels>
+    <labels>
+        <fullName>UserDeactivationBatchSize</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Deactivation Batch Size</shortDescription>
+        <value>15</value>
+    </labels>
+    <labels>
+        <fullName>UserDeactivationInactiveThreshold</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Deactivation Inactive Threshold</shortDescription>
+        <value>-30</value>
+    </labels>
+    <labels>
+        <fullName>UserDeactivationQueryLimit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserDeactivationQueryLimit</shortDescription>
+        <value>100</value>
+    </labels>
+</CustomLabels>

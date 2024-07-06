@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Classic_Template</letterhead>
+    <name>Appliance Refund Proceed</name>
+    <style>freeForm</style>
+    <subject>Refund Proceed HomeDepot</subject>
+    <textOnly>Thanks for your paitence and We have accepted your Request and the Proceed the refund
+
+{!Case.Model_Number_1__c}
+{!Case.Building_Number__c}
+
+{!Case.Refund_Percentage_Amount_1__c}
+
+{!Case.Order_Number__c}
+
+
+Case Thread Id {!Case.Case_Thread_Id__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

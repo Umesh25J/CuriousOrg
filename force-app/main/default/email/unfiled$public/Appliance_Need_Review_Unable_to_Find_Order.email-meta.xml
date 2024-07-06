@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>Classic_Template</letterhead>
+    <name>Appliance Need Review Unable to Find Order</name>
+    <style>freeForm</style>
+    <subject>Need Review Unable to Find Order HomeDepot</subject>
+    <textOnly>We cannnot Proceed Your Request as we are unable to find the order number
+
+{!Case.Order_Number__c}
+
+{!Case.Model_Number_1__c}
+
+Case Thread Id {!Case.Case_Thread_Id__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
