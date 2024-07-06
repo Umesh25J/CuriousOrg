@@ -1,0 +1,92 @@
+<apex:page controller="CreateOrderRecordController">
+	
+    <h1>PDF to Text Converter</h1>
+    <input type="file" id="pdfFileInput"/>
+    <button class="slds-button slds-button_brand" onclick="convertPDF()">Convert to Text</button>
+    <div id="output"></div>
+    <h1 id="orderNo"></h1>
+    <h1 id="orderDate"></h1>
+    <h1 id="orderTo"></h1>
+    <h1 id="orderItem"></h1>
+    <h1 id="total"></h1>
+        
+    
+    <style > 
+    #output {
+        font-size: 20px;
+        }
+        h1 {
+         font-size: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        
+
+		function convertPDF() {
+            const apiKey = '6a9d4201cdmshaada088ec0f6f57p1edd98jsn96e5fbf12ff6';
+            const apiUrl = 'https://pdf-to-text-converter.p.rapidapi.com/api/pdf-to-text/convert';
+        
+            const fileInput = document.getElementById('pdfFileInput');
+            const outputDiv = document.getElementById('output');
+            const orderNo = document.getElementById('orderNo');
+            const orderDate = document.getElementById('orderDate');
+            const orderTo = document.getElementById('orderTo');
+            const orderItem = document.getElementById('orderItem');
+            const total = document.getElementById('total');
+        
+            const file = fileInput.files[0];
+            console.log(file);
+            if (!file || !file.name.toLowerCase().endsWith('.pdf')) {
+                alert('Please select a valid PDF file.');
+                return;
+            }
+        
+            const formData = new FormData();
+            formData.append('file', file);
+        
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'x-rapidapi-key': apiKey,
+                },
+                body: formData,
+            })  
+            .then(response => response.text())
+			.then(textData => {
+               	const strArr = textData.split("\n");
+               	orderNo.innerHTML = '<pre>'+'our order No : ' + strArr[15] + '</pre>';
+               	orderDate.innerHTML = '<pre>'+'Order Date : ' + strArr[16] + '</pre>';
+               	orderTo.innerHTML = '<pre>'+'Order To : ' + strArr[29] +strArr[30] +strArr[31] +strArr[32] +strArr[33] + '</pre>';
+               	orderItem.innerHTML = '<pre>'+'Our Part Code  : ' + strArr[39].split(" ")[0] +',  Unit price  : ' + strArr[39].split(" ")[2]+ ',  Qty  : ' + strArr[40].split(" ")[1] +',  Total Price  : ' + strArr[40].split(" ")[3]+ '</pre>';
+               	total.innerHTML = '<pre>'+'Total : 939297.00' +  '</pre>';
+
+            	var param1 = strArr[29];
+        		var param2 = strArr[16];
+        		var param3 = ' true';
+        		var param4 = strArr[15];
+        		var param5 = strArr[40].split(" ")[1];
+        		var param6 = strArr[49].split(" ")[1];
+                Visualforce.remoting.Manager.invokeAction(
+                	'{!$RemoteAction.CreateOrderRecordController.createOrderWithProducts}',
+                	param1, param2, param3,param4,param5,param6,
+                	function(result, event) {
+                    	if(event.status) {
+                        	console.log(result);
+                    	}else if (event.type === 'exception') {
+                        	console.error(event.message);
+                    	}else {
+                        	console.error('Error: ' + event.message);
+                    	}
+                	}
+            	);
+                console.log(strArr);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                outputDiv.innerHTML = 'An error occurred. Please try again later.';
+            });
+		}
+        
+    </script>    
+</apex:page>

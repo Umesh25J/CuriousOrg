@@ -1,0 +1,176 @@
+<template>
+    <header class="demo-only-element slds-theme_default slds-border_bottom slds-p-around_small slds-text-align_right"
+        style="z-index:1">
+        <div class="slds-p-around_medium lgc-bg list_view_and_table_container">
+            <lightning-tile label="List of Items" title="List of Items" type="media" href="#" class="list_view_container">
+                <lightning-icon slot="media" icon-name="standard:orders" size="medium" class="icon_custom_class">
+                </lightning-icon>
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control">
+                        <div class="slds-combobox_container slds-size_small">
+                            <div class={dropdownTriggerClass} aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                                <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                                    role="none" onclick={handleClickExtend}>
+                                    <span class="current_filter">{currentFilter}
+                                        <lightning-icon
+                                            class="slds-button__icon slds-icon-utility-down slds-icon_container forceIcon"
+                                            data-data-rendering-service-uid="232" data-aura-rendered-by="371:0"
+                                            data-aura-class="forceIcon" icon-name="utility:down" size="x-small">
+                                        </lightning-icon>
+                                    </span>
+                                </div>
+                                <div id="listbox-id-1" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                                    role="listbox">
+                                    <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                        <template for:each={filterOptions} for:item="option">
+                                            <li role="presentation" class="slds-listbox__item" key={option.value}>
+                                                <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small"
+                                                    data-filter={option.value} onclick={handleFilterChangeButton}>
+                                                    <span class="slds-media__figure slds-listbox__option-icon"
+                                                        data-filter={option.value}></span>
+                                                    <span class="slds-media__body" data-filter={option.value}>
+                                                        <span class="slds-truncate" title="Option A"
+                                                            data-filter={option.value}>{option.label}</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </lightning-tile>
+            <button
+            class="slds-button slds-button_icon slds-is-selected slds-button_icon-border-filled slds-button_icon-border"
+            title="Toggle filter panel" aria-expanded="true" aria-controls="example-unique-id-7" aria-pressed="true">
+            <svg class="slds-button__icon" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#filterList"></use>
+            </svg>
+            <span class="slds-assistive-text">
+                Provided with filter
+            </span>
+        </button>
+        </div>
+    </header>
+    <div class="demo-only-element"
+        style="background-color:#fafaf9;position:relative;height:600px;overflow:hidden;display:flex;flex-direction:row-reverse">
+        <div class="slds-panel slds-size_medium slds-panel_docked slds-panel_docked-right slds-panel_drawer slds-is-open"
+            aria-hidden="false" id="example-unique-id-7">
+            <div class="slds-panel__header">
+                <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Filter">Filter</h2>
+                <div class="slds-panel__header-actions">
+                    <button class="slds-button slds-button_icon slds-button_icon-small slds-panel__close"
+                        title="Collapse Filter">
+                        <svg class="slds-button__icon" aria-hidden="true">
+                            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Collapse Filter</span>
+                    </button>
+                </div>
+            </div>
+            <div class="slds-panel__body">
+                <div class="slds-filters">
+                    <ol class="slds-list_vertical slds-list_vertical-space">
+                        <li class="slds-item slds-hint-parent">
+                            <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                                <button class="slds-button_reset slds-grow slds-has-blur-focus">
+                                    <span class="slds-assistive-text">Edit filter:</span>
+                                    <span class="slds-show slds-text-body_small">Show Me</span>
+                                    <span class="slds-show">All Products</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ol>
+                    <h3 class="slds-text-body_small slds-m-vertical_x-small">Matching all these filters</h3>
+                    <ol class="slds-list_vertical slds-list_vertical-space">
+                        <li class="slds-item slds-hint-parent">
+                            <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                                <button class="slds-button_reset slds-grow slds-has-blur-focus">
+                                    <span class="slds-assistive-text">Edit filter:</span>
+                                    <span class="slds-show slds-text-body_small">Created Date</span>
+                                    <span class="slds-show">equals THIS WEEK</span>
+                                </button>
+                                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small"
+                                    title="Remove equals THIS WEEK">
+                                    <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Remove filter: Created Date equals THIS
+                                        WEEK</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="slds-item slds-hint-parent">
+                            <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                                <button class="slds-button_reset slds-grow slds-has-blur-focus">
+                                    <span class="slds-assistive-text">Edit filter:</span>
+                                    <span class="slds-show slds-text-body_small">List Price</span>
+                                    <span class="slds-show">greater than &quot;500&quot;</span>
+                                </button>
+                                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small"
+                                    title="Remove greater than &quot;500&quot;">
+                                    <svg class="slds-button__icon slds-button__icon_hint" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#delete"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">Remove filter: List Price greater than
+                                        &quot;500&quot;</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ol>
+                    <div class="slds-filters__footer slds-grid slds-shrink-none">
+                        <button class="slds-button_reset slds-text-link">Add Filter</button>
+                        <button class="slds-button_reset slds-text-link slds-col_bump-left">Remove All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="demo-only-content slds-col slds-p-around_medium">
+            <lightning-card>
+                <template if:false={isLoaded}>
+                    <div class="spinner_class_div">
+                        <lightning-spinner class="spinner_class" alternative-text="Loading" variant="brand">
+                        </lightning-spinner>
+                    </div>
+                </template>
+                <lightning-datatable key-field="Id" data={itemsForCurrentView} columns={columns}>
+                </lightning-datatable>
+            </lightning-card>
+        </div>
+    </div>
+    <lightning-card title="Filters">
+        <div class="slds-align_absolute-center">
+    <template for:each={alphabet} for:item="letter">
+        &nbsp;<a onclick={handleFilterChange} key={letter} data-filter={letter}>
+            {letter}
+        </a>
+        &nbsp;|
+    </template>
+    <a onclick={handleFilterChange} data-filter="">
+        ALL
+    </a>
+        </div>
+    <lightning-datatable 
+        columns={columns}
+        data={currentPage}
+        key-field="index">
+    </lightning-datatable>
+    <div class="slds-align_absolute-center">
+    <lightning-button-group>
+    <lightning-button label="First" onclick={firstPage}>
+    </lightning-button>
+    <lightning-button label="Previous" onclick={previousPage}>
+    </lightning-button>
+    <div class="slds-m-horizontal_medium slds-align_absolute-center">
+    {pageNumber} of {maxPageNumber}
+    </div>
+    <lightning-button label="Next" onclick={nextPage}>
+    </lightning-button>
+    <lightning-button label="Last" onclick={lastPage}>
+    </lightning-button>
+    </lightning-button-group>
+    </div>
+    </lightning-card>
+</template>

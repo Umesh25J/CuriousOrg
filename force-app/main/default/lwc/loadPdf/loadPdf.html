@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="PDF Uploader">
+        <lightning-file-upload
+            label="Upload PDF"
+            accept=".pdf"
+            record-id={recordId}
+            onuploadfinished={handleUploadFinished}>
+        </lightning-file-upload>
+    </lightning-card>
+</template>

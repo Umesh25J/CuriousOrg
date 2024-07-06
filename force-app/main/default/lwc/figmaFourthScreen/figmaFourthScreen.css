@@ -1,0 +1,11 @@
+lightning-card{
+    --sds-c-card-color-background: #F5FBFF;
+    --sds-c-card-color-border: #F5FBFF;
+    --sds-c-button-brand-color-background: purple;
+}
+lightning-card .inner{
+    --sds-c-card-color-background:rgb(255, 255, 255);
+    --sds-c-card-color-border: rgb(255, 255, 255);
+    --sds-c-button-brand-color-background: purple;
+    
+}

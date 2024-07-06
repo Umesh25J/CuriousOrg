@@ -1,0 +1,89 @@
+body {
+    background:#000;  
+  }
+ 
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+ 
+  i {
+    background: white;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius:50%;
+    display:inline-block;
+    padding:10px;
+  }
+ 
+  img {
+    display:block;
+  }
+  .vl {
+    border-left: 1px solid rgb(3, 3, 3);
+    height: 40px;
+    margin-left: 25px;
+  }
+ 
+  .head{
+    color : #192942;
+    font: weight 5px;
+    font-size: 22px;
+   
+ 
+  }
+  .row
+  {
+    margin-left: 280px;
+    margin-top: 100px;
+  }
+  .column {
+    float: left;
+    width: 15%;
+    padding-left: 45px;
+  }
+  .column2 {
+    float: left;
+    width: 50%;
+  }
+ 
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @font-face {
+    /*
+        font family is used to give a name to the custom font,
+         you use this for referencing the custom font later
+    */
+    font-family: "Noto Serif Khojki";
+ 
+    /*
+        This is the location of the Custom Font, note, I have stored in a ZIP file
+     */
+    src: url('/resource/Noto_Serif_Khojki/NotoSerifKhojki-VariableFont_wght.ttf') format('TrueType');
+ }
+ 
+ lightning-card{
+    --sds-c-card-color-background: #F5FBFF;
+    --sds-c-card-color-border: #F5FBFF;
+    --sds-c-button-brand-color-background: purple;
+}
+lightning-card .inner{
+    --sds-c-card-color-background:rgb(25,41,66);
+    --sds-c-card-color-border: rgb(25,41,66);
+    --sds-c-button-brand-color-background: purple;
+}
+.font {
+    font-family: 'Noto Serif Khojki';
+}
+lightning-card .innerwhite{
+    --sds-c-card-color-background:rgb(255, 255, 255);
+    --sds-c-card-color-border: rgb(255, 255, 255);
+    --sds-c-button-brand-color-background: purple;
+}

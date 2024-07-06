@@ -1,0 +1,25 @@
+<template>
+    <lightning-card  title="Check Unsued Metadata">
+        <lightning-layout horizontal-align='center' vertical-align='start' multiple-rows>
+            <lightning-layout-item padding='around-small'>
+                <lightning-input type='search' label='Search' onchange={handleOnChange}>
+                </lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item padding='around-small'>
+                <template if:true={unreferencedClasses}>
+                    <h1>Unreferenced Apex Classes:</h1>
+                    <ul>
+                        <template for:each={unreferencedClasses} for:item="apexClass">
+                            <li key={apexClass.Id}>{apexClass.Name}</li>
+                        </template>
+                    </ul>
+                </template>
+                <template if:false={unreferencedClasses}>
+                    <p>No unreferenced Apex classes found.</p>
+                </template>
+            </lightning-layout-item>
+            <lightning-layout-item padding='around-small'>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
