@@ -15,6 +15,10 @@ public with sharing class AccountContactController
         AccountContactServices acs = new AccountContactServices();
         acs.deleteChildData(conId);
     }*/
+    /*
+    For testing we are making the changes to this file
+    for the github tutorial and need to follow the 
+    steps for now */
 
     @AuraEnabled 
     public static List<Account> getAccountContactRecords()
