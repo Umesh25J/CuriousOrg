@@ -1,0 +1,227 @@
+<template>
+    <div class="form" style="padding: 20px;border: 1px solid #ccc; padding: 20px;">
+        <form id="caseForm" onsubmit={requestForm}>
+
+            <input type="hidden" name="orgid" value="00D5j000008cATU">
+            <!-- input type="hidden" name="retURL" value="https://curious-badger-l22yc1-dev-ed.my.site.com" -->
+        
+            <label for="name">Contact Name</label>
+            <input id="name" maxlength="80" name="name" size="20" type="text" /><br>
+            
+            <label for="email">Email</label>
+            <input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+            
+            <label for="phone">Phone</label>
+            <input id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+            
+            <label for="subject">Subject</label>
+            <input id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+            
+            <label for="description">Description</label>
+            <textarea id="description" name="description"></textarea><br>
+            
+            <input type="hidden" id="external" name="external" value="1" /><br>
+            
+            <!-- Model Number Fields -->
+            <div id="modelFields">
+                <label for="model1">Model Number 1</label>
+                <input id="model1" maxlength="7" name="model1" size="20" type="text" /><br>
+            
+                <label for="model2">Model Number 2</label>
+                <input id="model2" maxlength="7" name="model2" size="20" type="text" /><br>
+            
+                <label for="model3">Model Number 3</label>
+                <input id="model3" maxlength="7" name="model3" size="20" type="text" /><br>
+            </div>
+            
+            <!-- Refund Fields -->
+            <div id="refundFields">
+                <label for="refund1">Refund % 1</label>
+                <input id="refund1" name="refund1" size="20" type="text" /><br>
+            
+                <label for="refund2">Refund % 2</label>
+                <input id="refund2" name="refund2" size="20" type="text" /><br>
+            
+                <label for="refund3">Refund % 3</label>
+                <input id="refund3" name="refund3" size="20" type="text" /><br>
+            </div>
+            
+            <input type="submit" name="submit">
+            
+            </form>  
+    </div>
+
+  <!--  <template>
+        <form action="https://warehouse--npdev.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DK000000XJkpI" method="POST">
+    
+            <input type=hidden name="orgid" value="00DK000000XJkpI"></input>
+            <input type=hidden name="retURL" value="https://warehouse--npdev.sandbox.my.site.com/temcotest/">
+            
+            <label for="email">Email:</label><br>
+            
+            <input class="test" id="email" maxlength="80" name="email" size="20" type="text" /><br><br>
+            
+            <label for="phone">Phone:</label><br>
+            <input id="phone" maxlength="40" name="phone" size="20" type="text" /><br><br>
+            
+            <label for="name">Contact Name:</label><br>
+            <input id="name" maxlength="80" name="name" size="20" type="text" /><br><br>
+            
+            <label for="recordType">Case Record Type:</label><br>
+            <select  id="recordType" name="recordType"><option value="">--None--</option><option value="012K0000000PQ20">1SC - FDC Change Request</option>
+            <option value="012K0000000PQ0O">1SC - OCC Change Request</option>
+            <option value="01250000000E5tr">After Hours Address Change</option>
+            <option value="01250000000E816">BOSS Damaged</option>
+            <option value="01250000000E81L">BOSS Reorder</option>
+            <option value="01250000000E81M">BOSS Short-Shipped</option>
+            <option value="012K0000000QDYa">Cancel Request</option>
+            <option value="01250000000E7jR">CCA Case</option>
+            <option value="01250000000RYM9">CCA Case Home Services</option>
+            <option value="01250000000E7jS">CCA General Information Case</option>
+            <option value="0125000000021VL">CCA MyInstall</option>
+            <option value="01250000000E7jT">CCA Phone an Apron Case</option>
+            <option value="012K0000000Hj2P">CCA Social</option>
+            <option value="01250000000cIu9">Chargeback</option>
+            <option value="012K0000000LnYS">Corporate Relations</option>
+            <option value="01250000000NC22">CRM Res Chat</option>
+            <option value="01250000000E5tv">Deactivate Gift Card</option>
+            <option value="012K00000009mWg">Demo Interaction</option>
+            <option value="01250000000E5tw">Discount Request</option>
+            <option value="01250000000E7j7">Email General Information</option>
+            <option value="01250000000E7zF">Email Gift Card</option>
+            <option value="01250000000E7zG">Email Order Status</option>
+            <option value="01250000000E7jC">Email Return</option>
+            <option value="01250000000E845">Email Transfer</option>
+            <option value="012DF000000RvSX">E-store Credit Return Escalation</option>
+            <option value="01250000000E5tx">Executive Escalations</option>
+            <option value="012K0000000LsAQ">Field Requesting Assistance</option>
+            <option value="01250000000RY5j">Foresee Survey</option>
+            <option value="012K0000000ILBq">General</option>
+            <option value="01250000000cIuA">GM Delivery Exceptions</option>
+            <option value="012DF000000RssX">In Store Only Product Return</option>
+            <option value="012K0000000M5S6">InvalidEmail</option>
+            <option value="01250000000E5u0">Item Pickup</option>
+            <option value="01250000000RYAy">Low Product Rating</option>
+            <option value="0125000000021Hi">MA Add/Remove Parts or Services</option>
+            <option value="0125000000021Hj">MA Damaged</option>
+            <option value="01250000000RYBh">Major Appliance Exception</option>
+            <option value="0125000000021bs">Manual Adjustments</option>
+            <option value="0125000000021Hl">MA Reschedule</option>
+            <option value="0125000000021Hk">MA RGA</option>
+            <option value="012K0000000LswZ">Merchandise</option>
+            <option value="012DF000000RrzI">Military Exchange Refund</option>
+            <option value="0125000000021Nb">OCC Action Needed</option>
+            <option value="012K0000000QkAo">OCC PRO</option>
+            <option value="012K0000000DeBw">Online ELT</option>
+            <option value="01250000000RY0t">Opinion Lab Survey</option>
+            <option value="01250000000E5u5">Order ETA</option>
+            <option value="01250000000RY5l">Order Verification</option>
+            <option value="012K0000000PPpf">PO Stuck in Sent to Vendor</option>
+            <option value="012K0000000Ic8S">Pro Email to Case</option>
+            <option value="0125000000021VM">Pro Referral Case</option>
+            <option value="0125000000021VN">Pro Referral PFF Case</option>
+            <option value="012K0000000Lnbb">Pro Xtra</option>
+            <option value="012DF000000Rw1X">Refund Verification</option>
+            <option value="01250000000E5u8">Return Credit Needed</option>
+            <option value="01250000000E5u6">Return Request</option>
+            <option value="01250000000E5u9">Send Gift Card</option>
+            <option value="01250000000cIok">Service Call GM</option>
+            <option value="012K0000000LrtA">Services</option>
+            <option value="012K0000000PeU4">Social Sprinklr</option>
+            <option value="012K0000000LmMa">Store Experience</option>
+            <option value="01250000000E5uA">Supervisor Follow Up</option>
+            <option value="012K00000001SBK">TCS Lifetime Gurantee</option>
+            <option value="0125000000021Nc">YOW Order</option>
+            </select><br><br>
+            
+            <labeL>Order #:</labeL><br>
+            <input id="00N50000003DkEU" maxlength="80" name="00N50000003DkEU" size="20" type="text" /><br><br>
+            
+            <label for="description">Description:</label>
+            <lightning-textarea name="description"></lightning-textarea>
+            
+            <input type="hidden" id="external" name="external" value="1" /><br><br>
+            
+            <lightning-button variant="brand" class="button" type="submit" name="submit" label="Submit"></lightning-button>
+            
+        </form>
+    </template>
+    
+    
+    
+    <template>
+        <lightning-card title="Communication Details" >
+            
+                <lightning-record-edit-form object-api-name="Communication__c" onsubmit={handleSubmit}  onsuccess={handleRecordCreate}>
+                    <lightning-messages></lightning-messages>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-box">
+                        <div class="slds-col slds-size_1-of-2 ">
+                            
+                            <lightning-input-field field-name={headerField}></lightning-input-field>
+                            <lightning-input-field field-name={audienceField}></lightning-input-field>
+                            <lightning-input-field field-name={sendToLeadership}></lightning-input-field>
+                            <lightning-input-field field-name={fromField}></lightning-input-field>
+                            <lightning-input-field field-name={expirationDateField}></lightning-input-field>
+                            <lightning-input-field field-name={subjectField}></lightning-input-field>
+                        </div>
+                       <div class="slds-col slds-size_1-of-1 ">
+                        
+                        <lightning-input-field field-name={bodyField}></lightning-input-field>
+                    </div>
+                        <div class="slds-align_absolute-center">
+                            <lightning-button variant="brand" type="submit" label="Save">
+                            </lightning-button>
+                               <lightning-button type="Cancel" label="Cancel">
+                            </lightning-button>
+                        </div>
+                    </div>
+                </div>
+                </lightning-record-edit-form>
+                <template if:true={toggleSpinner}>
+                    <lightning-spinner alternative-text="Loading" size="medium" class="spinnerClass"></lightning-spinner>
+                </template>
+        </lightning-card>
+    </template>
+    
+    <template>
+        <lightning-card title="Communication Details" >
+        <div class="slds-grid slds-wrap">
+            <div class="slds-box">
+         
+                    <div class="slds-col slds-size_1-of-2 ">
+                        <lightning-combobox label="Header" options={headerOptions} onchange={handleChangeHeader} value={headerField}>
+                        </lightning-combobox>
+                       <lightning-input label="Audience" type="search" onchange={handleChangeAudience} value={audienceField}>
+                        </lightning-input>
+                        
+                        <lightning-input label="Send to Leadership" type="checkbox" onchange={handleChangeSendTo} value={sendToLeadership}>
+                        </lightning-input>
+                        <lightning-input label="From" type="text" onchange={handleChangeFrom} value={fromField}>
+                        </lightning-input>
+                        <lightning-input label="Expiration Date" type="Date" onchange={handleChangeExpDate} value={expirationDateField}>
+                        </lightning-input>
+                        <lightning-input label="Subject" type="text" onchange={handleChangeSubject} value={subjectField}>
+                        </lightning-input>
+                    </div>
+                    <div>Body</div>
+                    <div class="slds-col slds-size_1-of-1 ">
+                        <lightning-input-rich-text label="Body" name="Body" onchange={handleChangeBody} value={bodyField}>
+                        </lightning-input-rich-text>
+                    </div>
+                    <br/>
+                    <div class="slds-align_absolute-center">
+                        <lightning-button variant="brand" type="submit" label="Save" onclick={createCommunicationRecord}>
+                        </lightning-button>
+                        <lightning-button type="Cancel" label="Cancel" onclick={backToListView}>
+                        </lightning-button>
+                    </div>
+                 
+        </div>
+        </div>
+        </lightning-card>
+        <template if:true={toggleSpinner}>
+            <lightning-spinner alternative-text="Loading" size="medium" class="spinnerClass"></lightning-spinner>
+        </template>
+        </template>-->
+</template>

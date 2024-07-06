@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="PDF Data Extractor">
+        <!-- Add the loadPDF component here to handle file upload and emit 'pdfloaded' event-->
+
+        <c-load-pdf onpdfloaded={handlePdfLoaded} ></c-load-pdf> 
+        
+        <!-- Add the PdfTextExtractor component to extract and display the text -->
+        <c-pdf-text-extractor pdf-content={pdfContent}></c-pdf-text-extractor>
+    </lightning-card>
+</template>

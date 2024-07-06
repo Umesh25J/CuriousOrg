@@ -1,0 +1,141 @@
+<template>
+    <lightning-card title="UI API Playground">
+        <div class="slds-p-horizontal_small">
+            <!-- Menu -->
+            <lightning-button-group class="slds-m-bottom_large">
+                <template for:each={apiDefinitions} for:item="category">
+                    <lightning-button-menu
+                        key={category.name}
+                        label={category.name}
+                        onselect={handleMenuSelect}
+                    >
+                        <template
+                            for:each={category.endpoints}
+                            for:item="endpoint"
+                        >
+                            <lightning-menu-item
+                                key={endpoint.name}
+                                value={endpoint.name}
+                                label={endpoint.label}
+                                onclick={handleMenuClick}
+                            ></lightning-menu-item>
+                        </template>
+                    </lightning-button-menu>
+                </template>
+            </lightning-button-group>
+
+            <!-- Currently selected endpoint -->
+            <template lwc:if={selectedEndpoint}>
+                <c-api-endpoint
+                    name={selectedEndpoint.fullname}
+                    status={selectedEndpoint.status}
+                    description={selectedEndpoint.description}
+                    doc-url-key={selectedEndpoint.docUrlKey}
+                >
+                    <c-get-list-ui lwc:if={isGetListUi}></c-get-list-ui>
+                    <c-get-list-info-by-name
+                        lwc:elseif={isGetListInfoByName}
+                    ></c-get-list-info-by-name>
+                    <c-get-list-infos-by-name
+                        lwc:elseif={isGetListInfosByName}
+                    ></c-get-list-infos-by-name>
+                    <c-get-object-info
+                        lwc:elseif={isGetObjectInfo}
+                    ></c-get-object-info>
+                    <c-get-object-infos
+                        lwc:elseif={isGetObjectInfos}
+                    ></c-get-object-infos>
+                    <c-get-picklist-values
+                        lwc:elseif={isGetPicklistValues}
+                    ></c-get-picklist-values>
+                    <c-get-picklist-values-by-record-type
+                        lwc:elseif={isGetPicklistValuesByRecordType}
+                    ></c-get-picklist-values-by-record-type>
+                    <c-create-record
+                        lwc:elseif={isCreateRecord}
+                    ></c-create-record>
+                    <c-create-record-input-filtered-by-edited-fields
+                        lwc:elseif={isCreateRecordInputFilteredByEditedFields}
+                    ></c-create-record-input-filtered-by-edited-fields>
+                    <c-delete-record
+                        lwc:elseif={isDeleteRecord}
+                    ></c-delete-record>
+                    <c-generate-record-input-for-create
+                        lwc:elseif={isGenerateRecordInputForCreate}
+                    ></c-generate-record-input-for-create>
+                    <c-generate-record-input-for-update
+                        lwc:elseif={isGenerateRecordInputForUpdate}
+                    ></c-generate-record-input-for-update>
+                    <c-get-field-value
+                        lwc:elseif={isGetFieldValue}
+                    ></c-get-field-value>
+                    <c-get-field-display-value
+                        lwc:elseif={isGetFieldDisplayValue}
+                    ></c-get-field-display-value>
+                    <c-get-record lwc:elseif={isGetRecord}></c-get-record>
+                    <c-get-records lwc:elseif={isGetRecords}></c-get-records>
+                    <c-get-record-create-defaults
+                        lwc:elseif={isGetRecordCreateDefaults}
+                    ></c-get-record-create-defaults>
+                    <c-get-record-notify-change
+                        lwc:elseif={isGetRecordNotifyChange}
+                    ></c-get-record-notify-change>
+                    <c-get-record-ui
+                        lwc:elseif={isGetRecordUi}
+                    ></c-get-record-ui>
+                    <c-notify-record-update-available
+                        lwc:elseif={isNotifyRecordUpdateAvailable}
+                    ></c-notify-record-update-available>
+                    <c-update-record
+                        lwc:elseif={isUpdateRecord}
+                    ></c-update-record>
+                    <c-get-nav-items
+                        lwc:elseif={isGetNavItems}
+                    ></c-get-nav-items>
+                    <c-get-related-list-records
+                        lwc:elseif={isGetRelatedListRecords}
+                    ></c-get-related-list-records>
+                    <c-get-related-list-records-batch
+                        lwc:elseif={isGetRelatedListRecordsBatch}
+                    ></c-get-related-list-records-batch>
+                    <c-get-related-list-info
+                        lwc:elseif={isGetRelatedListInfo}
+                    ></c-get-related-list-info>
+                    <c-get-related-list-info-batch
+                        lwc:elseif={isGetRelatedListInfoBatch}
+                    ></c-get-related-list-info-batch>
+                    <c-get-related-lists-info
+                        lwc:elseif={isGetRelatedListsInfo}
+                    ></c-get-related-lists-info>
+                    <c-get-related-list-count
+                        lwc:elseif={isGetRelatedListCount}
+                    ></c-get-related-list-count>
+                    <template lwc:else>
+                        <p class="slds-text-color_destructive">
+                            Error: unknown action {selectedEndpoint.name}
+                        </p>
+                    </template>
+                </c-api-endpoint>
+            </template>
+
+            <!-- No endpoint selected -->
+            <template lwc:else>
+                <div
+                    class="slds-illustration slds-illustration_large"
+                    aria-hidden="true"
+                >
+                    <div class="slds-text-color_weak slds-m-bottom_medium">
+                        <h3 class="slds-text-heading_medium">
+                            Select an endpoint from the menu.
+                        </h3>
+                    </div>
+                    <img
+                        src="/img/chatter/OpenRoad.svg"
+                        class="slds-illustration__svg"
+                        alt=""
+                    />
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

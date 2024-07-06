@@ -1,0 +1,15 @@
+<template>
+    <template for:each={groupedContacts} for:item="groupedContact">
+        <lightning-card key={groupedContact.name} title={groupedContact.name}>
+            <lightning-layout vertical-align="start" multiple-rows>
+                <template for:each={groupedContact.contacts} for:item="contact">
+                    <lightning-layout-item key={contact.id}>
+                        <p>{contact.name}</p>
+                        <p>{contact.phone}</p>
+                        <p>{contact.email}</p>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+        </lightning-card>
+    </template>
+</template>

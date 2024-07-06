@@ -1,0 +1,71 @@
+<apex:page controller="ContactController">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:form >
+        <apex:pageBlock title="Contact List">
+            <apex:pageBlockTable value="{!contacts}" var="con">
+                <apex:column value="{!con.FirstName}"/>
+                <apex:column value="{!con.LastName}"/>
+                <apex:column value="{!con.Email}"/>
+                <apex:column headerValue="Edit">
+                    <apex:commandButton value="Edit" onclick="openModal('{!con.Id}')"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+    
+    <apex:outputPanel id="modal">
+        <apex:outputPanel styleClass="modal-backdrop" rendered="{!showModal}"/>
+        <apex:outputPanel styleClass="modal" layout="block" rendered="{!showModal}">
+            <apex:outputPanel styleClass="modal-header">
+                <h4>Edit Contact</h4>
+            </apex:outputPanel>
+            <apex:outputPanel styleClass="modal-body">
+                <apex:includeScript value="{!$Resource.jQuery}"/>
+                <apex:includeScript value="{!$Resource.Bootstrap}"/>
+                <apex:form >
+                    <apex:inputField value="{!selectedContact.FirstName}"/>
+                    <apex:inputField value="{!selectedContact.LastName}"/>
+                    <apex:inputField value="{!selectedContact.Email}"/>
+                    <apex:commandButton value="Save" onclick="saveContact();"/>
+                	<apex:commandButton value="Close" onclick="closeModal();"/>
+                </apex:form>
+            </apex:outputPanel>
+            <apex:outputPanel styleClass="modal-footer">
+                
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+    <script>
+        function openModal(contactId) {
+            document.getElementById('{!$Component.modal}').style.display = 'block';
+      
+        }
+        function closeModal() {
+            document.getElementById('{!$Component.modal}').style.display = 'none';
+     
+        }
+        function saveContact() {
+            var inputs = document.getElementsByTagName("input");
+            var data = {
+                "contactId": "{!selectedContact.Id}"
+            };
+            for(var i=0;i<inputs.length;i++) {
+                data[inputs[i].id] = inputs[i].value;
+            }
+            console.log(data);
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.ContactController.updateContact}',
+            function(result, event) {
+                if(event.status) {
+                    console.log(result);
+                    closeModal();
+                    window.location.reload();
+                } else {
+                    console.log(event.message);
+                }
+            });
+           }     
+        }
+    </script>
+</apex:page>

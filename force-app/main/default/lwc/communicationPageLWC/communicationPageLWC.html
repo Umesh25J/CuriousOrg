@@ -1,0 +1,99 @@
+<template>
+    <!-- <div class="form" style="padding: 20px;border: 1px solid #ccc; padding: 20px;">
+        <form id="caseForm" onsubmit={requestForm}>
+            <input type=hidden name="orgid" value="00DK000000XJkpI"></input>
+              <input type=hidden name="retURL" value="https://warehouse--npdev.sandbox.my.site.com/temcotest/"> cooment this after
+
+            <lightning-input class="slds-size_1-of-3 slds-align_absolute-center" id="subject" maxlength="80"
+                name="subject" size="20" type="text" label="Subject:" required disable="true" readonly
+                value="Temco Refund Case"></lightning-input><br>
+
+            <lightning-input class="slds-size_1-of-3 slds-align_absolute-center" id="email" maxlength="80" name="email"
+                size="20" type="text" label="Email:" required></lightning-input><br>
+
+            <lightning-input class="slds-size_1-of-3 slds-align_absolute-center" id="phone" maxlength="40" name="phone"
+                size="20" type="text" label="Phone:" required></lightning-input><br>
+
+            <lightning-input class="slds-size_1-of-3 slds-align_absolute-center" id="name" maxlength="80" name="name"
+                size="20" type="text" label="Contact Name:" required></lightning-input><br>
+
+            <lightning-select class="slds-size_1-of-2 slds-align_absolute-center" placeholder="Please Select Type..."
+                id="recordType" label="Case Record Type:" name="recordType" options={options} value={value}
+                required></lightning-select>
+
+            <lightning-input class="slds-size_1-of-3 slds-align_absolute-center" id="00N50000003DkEU" maxlength="80"
+                name="00N50000003DkEU" size="20" type="text" label="Order #:" required
+                message-when-pattern-mismatch="Please Enter a Valid Order Number"
+                pattern="^$|[WwCc]{1}[A-Za-z0-9]{1}[0-9]{8,10}$|^[Hh]{1}[0-9]{4}-[0-9]{3,6}$|^([Tt][Ee][Ss][Tt]|([Gg]-?[a-zA-Z]{3}))-?[0-9]{4}-?[0-9]{2}-?[0-9]{4}"></lightning-input><br>
+
+            <textarea class="slds-size_1-of-3 slds-align_absolute-center" name="description"
+                label="Refund Amount and Building Number:" required></textarea>
+
+             Model Number Fields comment this after
+            <div id="modelFields" class="slds-size_1-of-3 slds-align_absolute-center">
+                <label for="model1">Model Number 1</label>
+                <input id="model1" maxlength="7" name="model1" size="20" type="text" onchange={handleInputChange} /><br>
+
+                <label for="model2">Model Number 2</label>
+                <input id="model2" maxlength="7" name="model2" size="20" type="text" onchange={handleInputChange} /><br>
+
+                <label for="model3">Model Number 3</label>
+                <input id="model3" maxlength="7" name="model3" size="20" type="text" onchange={handleInputChange} /><br>
+            </div>
+            </br>
+            </br>
+             Refund Fields comment this after
+            <div id="refundFields" class="slds-size_1-of-3 slds-align_absolute-center">
+                <label for="refund1">Refund % 1</label>
+                <input id="refund1" name="refund1" size="20" type="text" onchange={handleInputChange} /><br>
+
+                <label for="refund2">Refund % 2</label>
+                <input id="refund2" name="refund2" size="20" type="text" onchange={handleInputChange} /><br>
+
+                <label for="refund3">Refund % 3</label>
+                <input id="refund3" name="refund3" size="20" type="text" onchange={handleInputChange} /><br>
+            </div>
+
+            <input type="hidden" id="external" name="external" value="1" /><br>
+
+            <lightning-button variant="brand" class="slds-align_absolute-center button" type="submit" name="submit"
+                label="Submit"></lightning-button>
+
+        </form>
+    </div> -->
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D5j000008cATU" method="POST" onsubmit={validateForm}>
+
+        <input type=hidden name="orgid" value="00D5j000008cATU">
+        <input type=hidden name="retURL" value="https://curious-badger-l22yc1-dev-ed.my.site.com/webtocase/s"> 
+        <input type=hidden name="recordType" id="recordType" value="0125j000001PGAEAA4">
+        <input type=hidden name="priority" id="priority" value="high">
+        <input type=hidden name="subject" id="subject" value="Delivery Markdown Request">
+        
+        Building Number:<input  id="00N5j00000WvTzm" maxlength="4" name="00N5j00000WvTzm" size="20" type="text" /><br>
+        
+        Order #:<input  id="00N5j00000Wv3hP" maxlength="80" name="00N5j00000Wv3hP" size="20" type="text" /><br>
+        
+        Model Number 1:<input  id="00N5j00000WvU06" maxlength="7" name="00N5j00000WvU06" size="20" type="text" /><br>
+        
+        Refund Percentage Amount 1:<input  id="00N5j00000WvTzr" name="00N5j00000WvTzr" size="20" type="text" /><br>
+        
+        Model Number 2:<input  id="00N5j00000WvU0B" maxlength="7" name="00N5j00000WvU0B" size="20" type="text" /><br>
+        
+        Refund Percentage Amount 2:<input  id="00N5j00000WvTzw" name="00N5j00000WvTzw" size="20" type="text" /><br>
+        
+        Model Number 3:<input  id="00N5j00000WvU0G" maxlength="7" name="00N5j00000WvU0G" size="20" type="text" /><br>
+        
+        Refund Percentage Amount 3:<input  id="00N5j00000WvU01" name="00N5j00000WvU01" size="20" type="text" /><br>
+        
+        <label for="description">Description</label><textarea name="description"></textarea><br>
+        
+        <input type="hidden"  id="external" name="external" value="1" /><br>
+        
+        <input type="submit" name="submit">
+        <input type="reset" name="reset">
+        
+        </form>
+        <div id="success-message" class="hidden">
+            Your form has been submitted successfully!
+          </div>
+</template>

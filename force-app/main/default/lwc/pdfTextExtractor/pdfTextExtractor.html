@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="PDF Text Extractor">
+        <lightning-button variant="brand" label="Extract Text" onclick={extractText}></lightning-button>
+        <div class="extracted-text">
+            <template if:true={extractedText}>
+                <h3>Extracted Text:</h3>
+                <div>{extractedText}</div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

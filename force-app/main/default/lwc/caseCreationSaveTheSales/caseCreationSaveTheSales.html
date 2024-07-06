@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="The Home Depot Save the Sale Case Portal">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Order Number" value={ordernumber} onchange={handleOrderNumberChange} required pattern="[WCwc][A-Za-z0-9]{9}|[Hh][A-Za-z0-9]{11}"></lightning-input>
+            <lightning-input label="Building Number" value={buildingNumber} onchange={handleBuildingNumberChange}></lightning-input>
+            <lightning-input label="Subject" value={subject} onchange={handleSubjectChange}></lightning-input>
+            <lightning-textarea label="Notes" value={description} onchange={handleDescriptionChange}></lightning-textarea>
+            
+            <!-- <table>
+                <thead>
+                    <tr>
+                        <th>Modal Number</th>
+                        <th>Refund Percentage</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={lineItems} for:item="item" for:index="index">
+                        <tr key={item.id}>
+                            <td>
+                                <lightning-input label="Modal Number" value={item.modalNumber} onchange={handleModalNumberChange} data-index={index}  required pattern="[0-9]{7}"></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-input label="Refund Percentage" value={item.refundPercentage} onchange={handleRefundPercentageChange} data-index={index} required pattern="[0-9]{2}"></lightning-input>
+                            </td>
+                            <td>
+                                <lightning-button label="Remove" onclick={removeLineItem} data-index={index} variant="brand"></lightning-button>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table> -->
+            
+            <div class="slds-m-top_medium">
+                <!-- <lightning-button label="Add Line Item" onclick={addLineItem}></lightning-button> -->
+                <lightning-button label="Create Case" onclick={createCase} variant="brand"></lightning-button>
+                <lightning-button label="Cancel" onclick={clearFields}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
